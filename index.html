@@ -3,45 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruphy Studio™</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ruphy Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Ruphy Studio &trade;</h1>
-        <blockquote>
-            <h3><em>Drag and Drop your Rails project from Idea to IPO</em></h3>
-        </blockquote>
+<body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-gray-800">
+    <!-- Header -->
+    <header class="bg-[#181ED9] text-white shadow-lg sticky top-0 z-20">
+        <div class="container mx-auto flex justify-between items-center py-5 px-6">
+            <h1 class="text-3xl font-extrabold tracking-wider">Ruphy Studio</h1>
+            <nav class="flex items-center space-x-6">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+                    <li><a href="#features" class="hover:text-blue-300">Features</a></li>
+                    <li><a href="#about" class="hover:text-blue-300">About Us</a></li>
+                    <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+                </ul>
+                <!-- GitHub Link -->
+                <a href="https://github.com/michael-lins/ruphy_studio" target="_blank" class="flex items-center hover:text-blue-300">
+                    <svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                </a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <p>
-                Ruphy Studio &trade; is a Rapid Application Development (RAD) platform for Ruby on Rails projects with a 
-                <a href="https://en.wikipedia.org/wiki/History_of_Delphi_(software)" target="_blank">Delphi</a> experience flavor in mind. 
-                This is simply my love letter for myself (my 20-years-ago self).
+
+    <!-- Welcome Section -->
+    <section id="home" class="relative bg-gradient-to-b from-[#181ED9] to-blue-700 text-white py-28 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-6xl font-extrabold mb-6 leading-tight tracking-wide">
+                Drag and Drop your Rails project<br> from Idea to IPO
+            </h2>
+            <p class="text-xl mb-8">
+                Ruphy Studio &trade; is a rapid application development (RAD) platform for Ruby on Rails projects<br> with a <a href="https://en.wikipedia.org/wiki/History_of_Delphi_(software)" target="_blank" class="hover:text-blue-300">Delphi</a> experience flavor in mind. This is simply my love letter for myself (my 20-years-ago self).
             </p>
-        </section>
-        <section>
-            <h2>Main Goal</h2>
-            <blockquote>
-                <h3><em>That's the goal: to keep the wheel running from a new perspective, not reinventing it.</em></h3>
-            </blockquote>
-            <p>
-                The idea is to allow Ruby on Rails projects to be created from scratch (and attach them to remote Git repositories) and provide a 
-                new Drag and Drop experience to build WYSIWYG views using 
-                <a href="https://github.com/ruby-ui/ruby_ui" target="_blank">Ruby UI</a> 
-                <a href="https://rubyui.com/docs/introduction" target="_blank">components</a>.
+            <a href="#features" class="bg-blue-500 text-white font-semibold px-8 py-4 rounded-lg shadow-md hover:bg-white hover:text-blue-500">Explore Features</a>
+        </div>
+        <div class="absolute inset-0 pointer-events-none bg-center bg-cover opacity-20" style="background-image: url('https://source.unsplash.com/1600x900/?ocean,technology');"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-12">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform">
+                    <div class="text-[#181ED9] text-6xl mb-4">🖱️</div>
+                    <h3 class="text-2xl font-bold text-[#181ED9] mb-4">Intuitive Drag-n-Drop</h3>
+                    <p class="text-gray-600">Visualize and create Rails projects with ease using our drag-and-drop interface.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform">
+                    <div class="text-[#181ED9] text-6xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-bold text-[#181ED9] mb-4">Ruby UI Components</h3>
+                    <p class="text-gray-600">Craft modern and responsive designs powered by Hotwire and TailwindCSS.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform">
+                    <div class="text-[#181ED9] text-6xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-[#181ED9] mb-4">One-Click Deploy</h3>
+                    <p class="text-gray-600">Seamlessly publish your application to remote servers with Kamal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ruphy Studio in a Nutshell Section -->
+    <section class="bg-blue-100 py-20 px-6 relative">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-12">Ruphy Studio in a Nutshell</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="flex flex-col space-y-12">
+                    <div class="flex items-center">
+                        <div class="bg-[#181ED9] text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl">1</div>
+                        <div class="ml-6 text-left">
+                            <h3 class="text-2xl font-bold text-[#181ED9]">Start Your Project</h3>
+                            <p class="text-gray-600">Begin by creating a new project in Ruphy Studio, a tool built to simplify Rails development with a focus on speed and simplicity.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#181ED9] text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl">2</div>
+                        <div class="ml-6 text-left">
+                            <h3 class="text-2xl font-bold text-[#181ED9]">Drag and Drop Components</h3>
+                            <p class="text-gray-600">Easily drag and drop Ruby UI components to design your project visually, manage models, routes, and other resources interactively.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#181ED9] text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl">3</div>
+                        <div class="ml-6 text-left">
+                            <h3 class="text-2xl font-bold text-[#181ED9]">Plug-in Your GitHub Repo</h3>
+                            <p class="text-gray-600">Link your GitHub repository to manage version control seamlessly and collaborate on your projects with ease.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#181ED9] text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl">4</div>
+                        <div class="ml-6 text-left">
+                            <h3 class="text-2xl font-bold text-[#181ED9]">Launch Your Project</h3>
+                            <p class="text-gray-600">Deploy your project using Kamal and take your idea from concept to deployment in record time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-center bg-cover opacity-10" style="background-image: url('https://source.unsplash.com/1600x900/?blueprint,technology');"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#181ED9] text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-6">Contact Us</h2>
+            <p>Do you have questions? Want to collaborate? Reach out to us at:</p>
+            <p class="mt-4">
+                <a href="mailto:support@ruphy.net" class="underline text-blue-300">support@ruphy.net</a>
             </p>
-            <p>
-                Users will also check their work using the Live Preview feature to later on deploy it to a remote server using 
-                <a href="https://kamal-deploy.org" target="_blank">Kamal</a>.
-            </p>
-            <p>
-                We'll leverage experience with 
-                <a href="https://hotwired.dev" target="_blank">Hotwire</a> to boost the UX with innovative and impactful approaches for developers 
-                (or just my) happiness.
-            </p>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#181ED9] text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Ruphy Studio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
